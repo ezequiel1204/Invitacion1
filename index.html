@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Quince Años - [Nombre de la Quinceañera]</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div class="quince-player">
+    
+    <audio id="songPlayer" src="Tercer Cielo - No Crezcas Mas (Video Oficial).mp3" loop></audio>
+    
+    <button id="playPauseBtn" class="player-btn">
+        <svg class="icon-play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5.14v13.72L19.25 12 8 5.14z"/>
+        </svg>
+        <svg class="icon-pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+        </svg>
+    </button>
+    
+    <span class="player-text">Reproduce</span>
+</div>
+
+    <div class="butterfly-container"></div>
+
+<header class="hero">
+    
+    <div class="hero-overlay"></div> <div class="hero-content">
+        <h1>Mis Quince Años</h1>
+        
+        <div id="countdown" class="countdown">
+            </div>
+    </div>
+</header>
+
+    <section id="invitacion" class="scroll-section">
+        <div class="container">
+            <h2>Estás invitado</h2>
+            <p class="intro-text">
+                "Un día soñé con este momento y hoy se hace realidad. 
+                Quiero compartir la alegría de mis 15 años contigo."
+            </p>
+            
+<div class="animated-section">
+        <div class="photo-container">
+            <img src="FOTO3.jpeg" alt="Pareja besándose" class="animated-photo" data-animation="fade-in-up">
+        </div>
+        <div class="icon-container">
+            <div class="animated-icon flower-icon" data-animation="rotate-scale"></div>
+        </div>
+        <div class="photo-container">
+            <img src="FOTO1.jpeg" alt="Anillo de compromiso" class="animated-photo" data-animation="fade-in-down">
+        </div>
+        <div class="icon-container">
+            <div class="animated-icon heart-icon" data-animation="beat"></div>
+        </div>
+        <div class="photo-container full-width">
+            <img src="FOTO2.jpeg" alt="Otra foto" class="animated-photo" data-animation="zoom-in">
+        </div>
+    </div>
+
+
+            <div class="parents">
+                <h3>Con la bendición de mis padres</h3>
+                <p>José Galaviz Martínez & Keyla Romero Galindo</p>
+            </div>
+            <div class="godparents">
+
+            </div>
+        </div>
+    </section>
+
+    <section id="celebracion" class="scroll-section">
+        <div class="container">
+            <h2>La Celebración</h2>
+            <div class="event-details">
+                <div class="event">
+                    <i class="fas fa-church"></i>
+                    <h3>Ceremonia Religiosa</h3>
+                    <p><strong>Fecha:</strong> Sábado, 13 de diciembre de 2025</p>
+                    <p><strong>Hora:</strong> 3:00 PM</p>
+                    <p><strong>Lugar:</strong> Iglesia Betania</p>
+                    <p>Calle Cobre y Ajusco #4428 Col. Mariano Escobedo C.P. 32230</p>
+                </div>
+                <div class="event">
+                    <i class="fas fa-glass-cheers"></i>
+                    <h3>Cena</h3>
+                    <p><strong>Hora:</strong> 5:00 PM</p>
+                    <p><strong>Lugar:</strong> Iglesia Betania</p>
+                    <p>Calle Cobre y Ajusco #4428 Col. Mariano Escobedo C.P. 32230</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ubicacion" class="scroll-section">
+        <div class="container">
+            <h2>Ubicación de la iglesia</h2>
+            <p>¡No te pierdas!</p>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d424.26824303981005!2d-106.50689802938673!3d31.711908075278995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e75f36d8aca993%3A0xcc7b2330ca3c7526!2sIglesia%20Betania!5e0!3m2!1ses-419!2smx!4v1763185125891!5m2!1ses-419!2smx"
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <section id="vestimenta" class="scroll-section">
+        <div class="container">
+            <h2>Código de Vestimenta</h2>
+            <i class="fas fa-user-tie icon-large"></i>
+            <p><strong>Semiformal</strong></p>
+            
+        </div>
+
+<div class="container">
+    <h2>Sugerencia de Regalo</h2>
+    
+    <i class="fas fa-gift icon-large"></i>
+    
+    <p>Tu presencia es el mejor regalo. Si además deseas obsequiarme un detalle, habrá un buzón disponible en la recepción.</p>
+    
+    <p class="agradecimiento">
+        <strong>¡Muchas gracias por ser parte de este sueño!</strong>
+    </p>
+    
+  
+</div>
+
+    </section>
+
+    <section id="rsvp" class="scroll-section">
+        <div class="container">
+            <h2>Confirmar Asistencia</h2>
+            <p>Por favor, confirma tu asistencia</p>
+           <a href="https://wa.me/526568140201?text=Hola,%20quiero%20confirmar%20mi%20asistencia." class="cta-button">Confirmar por WhatsApp</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>¡Gracias por ser parte de este día inolvidable!</p>
+       
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

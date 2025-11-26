@@ -1,0 +1,543 @@
+/* ===== VARIABLES DE COLOR Y FUENTES ===== */
+:root {
+    --primary-red: #9B2226; /* Un rojo vino elegante */
+    --accent-gold: #D4AF37; /* Dorado */
+    --bg-light: #FFFBF5;    /* Un fondo crema/blanco */
+    --text-dark: #333333;   /* Texto principal */
+    --text-light: #ffffff;
+    
+    --font-headings: 'Great Vibes', cursive; /* Fuente elegante */
+    --font-body: 'Lato', sans-serif;       /* Fuente legible */
+}
+
+/* ===== ESTILOS GLOBALES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0; /* <-- AÑADE ESTA LÍNEA */
+    padding: 0; /* <-- (Es bueno añadir esta también) */
+    
+    font-family: var(--font-body);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden; 
+    position: relative; 
+    
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-headings);
+    color: var(--accent-gold);
+    font-weight: normal;
+}
+
+h1 { font-size: 5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+h2 { font-size: 3.5rem; margin-bottom: 1.5rem; }
+h3 { font-size: 2.5rem; color: var(--primary-red); margin-bottom: 1rem; }
+p  { font-size: 1.1rem; margin-bottom: 1rem; }
+
+section {
+    padding: 5rem 0;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+/* Fondo con patrón de flores (reemplaza 'flower-bg.png' con tu imagen) */
+section:nth-of-type(even) {
+    background-color: #ffffff;
+    /* background-image: url('flower-bg.png'); */
+    /* background-size: cover; */
+}
+
+/* ===== SECCIÓN DE INICIO (HERO) ===== */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-light);
+    position: relative;
+    overflow: hidden;
+    
+    /* Fondo (reemplaza 'hero-background.jpg' con una foto o déjalo en rojo) */
+    background-color: var(--primary-red);
+    background-image: url('Documento.png'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Capa oscura para legibilidad */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    z-index: 3;
+}
+
+/* Bordes de flores (como en tu imagen) */
+/* Asegúrate de tener imágenes PNG transparentes de tus flores */
+.hero::after, body::before {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 3;
+    z-index: 2;
+    /* Reemplaza 'flores-esquina.png' con tu propia imagen */
+    /* background-image: url('flores-esquina.png'); */
+}
+
+/* Borde superior */
+.hero::after {
+    top: 1rem;
+    left: 1rem;
+}
+/* Borde inferior (usamos body::before para el opuesto) */
+body::before {
+    bottom: 1rem;
+    right: 1rem;
+    transform: scaleX(-1); /* Voltea la imagen */
+    position: fixed; /* Mantenlo fijo mientras scrolleas */
+    z-index: 1001; /* Encima de todo */
+}
+
+
+/* ===== CONTADOR ===== */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    font-family: var(--font-body);
+}
+
+.countdown div {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--accent-gold);
+    border-radius: 8px;
+    padding: 1rem;
+    min-width: 80px;
+}
+
+.countdown span {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-light);
+}
+
+.countdown p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+}
+
+/* ===== SECCIÓN CELEBRACIÓN ===== */
+.event-details {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.event {
+    flex-basis: 45%;
+}
+
+.event i {
+    font-size: 3rem;
+    color: var(--primary-red);
+    margin-bottom: 1rem;
+}
+
+/* ===== SECCIÓN VESTIMENTA ===== */
+.icon-large {
+    font-size: 4rem;
+    color: var(--primary-red);
+    margin-bottom: 1rem;
+}
+
+/* ===== BOTÓN DE RSVP ===== */
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-red);
+    color: var(--text-light);
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #721c20; /* Rojo más oscuro */
+    transform: scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #333;
+    color: var(--bg-light);
+}
+footer h2 {
+    color: var(--accent-gold);
+    font-size: 3rem;
+    margin: 0;
+}
+footer p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* ===== ANIMACIÓN DE SCROLL ===== */
+.scroll-section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1.2s ease-out;
+}
+
+.scroll-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* AÑADE ESTA NUEVA REGLA (en cualquier parte de tu CSS) */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Lo hacemos un poco más claro (0.3) para que el fondo rojo se vea más */
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1; /* Capa 1 (la más baja) */
+}
+/* ===== ANIMACIÓN DE MARIPOSAS ===== */
+.butterfly-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none; /* Esto ya está bien, permite hacer clic a través */
+    
+    /* --- ¡LA SOLUCIÓN! --- */
+    /* Cámbialo de 1000 a un valor bajo, como 1 */
+    z-index: 1; 
+}
+
+.butterfly {
+    position: absolute;
+    width: 40px; 
+    height: auto; 
+    animation: fly 15s linear infinite;
+    opacity: 0;
+}
+
+.butterfly img {
+    width: 100%;
+    height: auto;
+}
+
+/* Keyframes para la animación de vuelo */
+@keyframes fly {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(calc(100vw - 40px), -100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* ==============================================
+   ===== AJUSTES PARA CELULARES (RESPONSIVE) =====
+   ============================================== */
+@media (max-width: 768px) {
+
+    /* --- RESETEOS ADICIONALES PARA MÓVILES --- */
+    /* Asegura que el HTML y BODY no tengan márgenes o paddings inesperados */
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%; /* Asegura que el body ocupe todo el alto disponible */
+        overflow-x: hidden; /* Evita scroll horizontal si no es intencional */
+        box-sizing: border-box; /* Asegura que padding y border no sumen ancho */
+    }
+
+    /* Asegúrate de que el Hero se ajuste perfectamente */
+    .hero {
+        margin: 0; /* Sin margen en el Hero */
+        padding: 0; /* Sin padding en el Hero */
+        min-height: 100vh; /* Ocupa al menos el 100% del alto de la pantalla */
+        box-sizing: border-box;
+            background-image: url('Documento2.png'); 
+    }
+
+    /* También revisa si algún título tiene un margen superior */
+    .hero-content h1 {
+        margin-top: 0;
+    }
+    .hero-content h2 {
+        margin-top: 0;
+    }
+
+    /* ... (todos tus otros arreglos para el contador, banners, etc.) ... */
+    /* Estos de aquí abajo deberían ir DESPUÉS de los reseteos de arriba */
+    
+    .hero::before,
+    .hero::after {
+        height: 120px;
+    }
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Capa oscura para legibilidad */
+    z-index: 1;
+}
+    .countdown {
+        gap: 0.5rem;
+    }
+    .countdown div {
+        min-width: 65px;
+        padding: 0.7rem 0.5rem;
+    }
+    .countdown span {
+        font-size: 1.8rem;
+    }
+    .countdown p {
+        font-size: 0.7rem;
+    }
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    .container {
+        padding: 0 1.5rem;
+    }
+    section {
+        padding: 3rem 0;
+    }
+    .event-details {
+        flex-direction: column;
+    }
+}
+
+.animated-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 40px;
+    background-color: #9B2226;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+    overflow: hidden; 
+}
+
+.photo-container {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    position: relative; /* Añadido para que el z-index funcione */
+    z-index: 1; /* Nivel base */
+}
+
+
+
+.photo-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    object-fit: cover;
+    opacity: 0; /* Ocultas para animar entrada con JS */
+    transform: translateY(20px); 
+    transition: all 0.8s ease-out; 
+}
+
+.photo-container.full-width {
+    grid-column: span 2;
+}
+
+/* --- NUEVO ESTILO PARA SUPERPONER --- */
+.photo-overlap {
+    position: relative;
+    z-index: 2; /* Se mostrará por encima de otros elementos */
+    
+    /* Ajusta estos valores para cambiar cuánto se superpone */
+    margin-top: -80px;
+    margin-left: -30px;
+    
+    /* Pequeña rotación para el estilo de la foto */
+    transform: rotate(3deg);
+    border: 4px solid white; /* Borde blanco como en la captura */
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animated-icon {
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1; /* CAMBIO: Hecho visible por defecto */
+}
+
+/* Estilos de iconos (sin cambios) */
+.flower-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23f8f5ed" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-flower"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zM12 8a4 4 0 100 8 4 4 0 000-8zM12 2v2M22 12h-2M12 22v-2M2 12h2M19.07 4.93l-1.41 1.41M4.93 19.07l1.41-1.41M19.07 19.07l-1.41-1.41M4.93 4.93l1.41 1.41"></path></svg>');
+}
+
+.heart-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23f8f5ed" stroke="%23f8f5ed" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path></svg>');
+}
+
+/* Animaciones de FOTOS (sin cambios) */
+.animated-photo.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+@keyframes fadeInUp { /* ... */ }
+@keyframes fadeInDown { /* ... */ }
+@keyframes zoomIn { /* ... */ }
+.animated-photo.show[data-animation="fade-in-up"] { animation: fadeInUp 0.8s ease-out forwards; }
+.animated-photo.show[data-animation="fade-in-down"] { animation: fadeInDown 0.8s ease-out forwards; }
+.animated-photo.show[data-animation="zoom-in"] { animation: zoomIn 0.8s ease-out forwards; }
+
+
+/* Keyframes para iconos (sin cambios) */
+@keyframes rotateScale {
+    0% { transform: rotate(0deg) scale(0.8); }
+    50% { transform: rotate(180deg) scale(1.1); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+@keyframes beat {
+    0% { transform: scale(0.8); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* --- CAMBIO EN ANIMACIONES DE ICONOS --- */
+/* Se quitó .show y se añadió 'infinite' */
+.animated-icon[data-animation="rotate-scale"] {
+    animation: rotateScale 2.5s ease-in-out infinite; /* Más lento y suave */
+}
+
+.animated-icon[data-animation="beat"] {
+    animation: beat 1.5s ease-in-out infinite; /* Más lento y suave */
+}
+
+
+.quince-player {
+    position: fixed; /* Lo deja fijo en la pantalla */
+    bottom: 25px; /* A 25px de abajo */
+    left: 25px;  /* A 25px de la izquierda */
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+    border-radius: 50px; /* Completamente redondeado */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 999; /* Se asegura de que esté por encima de casi todo */
+}
+
+.player-btn {
+    background-color: white;
+    /* Usamos un dorado suave para el borde, muy de 15 años */
+    border: 2px solid #C9B081; 
+    border-radius: 50%; /* Botón circular */
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.player-btn:hover {
+    transform: scale(1.05); /* Efecto al pasar el mouse */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.player-btn svg {
+    width: 22px;
+    height: 22px;
+    /* Color verde oscuro de tu paleta */
+    fill: #3f5f4c; 
+}
+
+/* Pequeño ajuste para centrar el icono de play */
+.icon-play {
+     margin-left: 3px; 
+}
+
+.player-text {
+    margin-left: 12px;
+    margin-right: 12px;
+    /* Fuente elegante importada en el HTML */
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #3f5f4c; /* Verde oscuro de tu paleta */
+}
